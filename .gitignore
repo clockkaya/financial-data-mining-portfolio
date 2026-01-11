@@ -1,0 +1,66 @@
+# ==========================================
+# Python Standard (Python 标准忽略项)
+# ==========================================
+# 编译产生的缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境文件夹 (Virtual Environments)
+# 务必忽略，别人的环境和你不一样
+venv/
+env/
+.env
+.venv/
+ENV/
+
+# 分发与打包文件
+dist/
+build/
+*.egg-info/
+
+# ==========================================
+# Jupyter Notebooks (Jupyter 相关)
+# ==========================================
+# 这一项非常重要！Notebook 自动生成的检查点文件夹，不需要上传
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ==========================================
+# IDE & Editor (编辑器配置)
+# ==========================================
+# VS Code / PyCharm / Mac / Windows 系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Project Specific (项目特定忽略项 - 重点！)
+# ==========================================
+
+# 1. Data Files (数据文件)
+# 你的项目涉及薪资、基金等敏感金融数据，
+# 务必忽略这些格式，防止将隐私数据上传到 Github！
+*.csv
+*.tsv
+*.txt
+*.xlsx
+*.xls
+data/
+# 如果你有专门存放数据的文件夹，也加在这里
+01_Fund_Purchase_Prediction/data/
+02_Customer_Segmentation/data/
+03_Salary_Anomaly_Analysis/data/
+
+# 2. Database & Secrets (敏感配置)
+# 如果你未来把数据库密码写在配置文件里，一定要忽略它
+config.py
+secrets.py
+
+# 3. Large Binary Files (大型二进制文件)
+# 例如你之前上传的 xgboost...whl 安装包，
+# 这种大文件不建议传 git，应该通过 requirements.txt 安装
+*.whl
+*.zip
+*.rar
